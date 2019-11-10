@@ -14,10 +14,12 @@ get_dpms() {
 dpms_on() {
   xset s 180 120
   xset +dpms
+  polybar-msg hook dpms 1
 }
 dpms_off() {
   xset s off -dpms
   xset -dpms
+  polybar-msg hook dpms 2
 }
 
 if [ "$1" == "on" ]; then
@@ -32,10 +34,11 @@ elif [ "$1" == "toggle" ]; then
     dpms_on
   fi
 else
-  if [ "$(xset q | grep 'DPMS is Enabled')" ]; then
-    echo 'on'
-  else
+  get_dpms
+  if [ "$?" == "0" ]; then
     echo 'off'
+  else
+    echo 'on'
   fi
 fi
 

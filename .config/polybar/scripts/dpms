@@ -6,8 +6,8 @@ DPMS="/home/wesley/.local/bin/dpms"
 current=$($DPMS get)
 
 if [ $current == "on" ]; then
-    echo ''
+    echo '蘒'
 else
-    echo ''
+    echo '﨡'
 fi
 
