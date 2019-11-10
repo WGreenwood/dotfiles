@@ -1,0 +1,119 @@
+* {
+  background: #252525;
+  foreground: #f5f5f5;
+  scrollbar: #00796b;
+  borders: #009688;
+  prompt: #00796b;
+  prompt-text: #f5f5f5;
+  normal-element-background: #252525;
+  normal-element-foreground: #f5f5f5;
+  selected-element-background: #4caf50;
+  selected-element-foreground: #252525;
+}
+* {
+    font: "DejaVu Sans Mono Regular 10";
+    background-color: @background;
+}
+#window {
+    background-color: @background;
+    border: 1px;
+    border-color: @borders;
+}
+#mainbox {
+    background-color: @background;
+    spacing: 0px;
+    children: [message, inputbar, listview];
+}
+#message {
+    padding: 6px 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+#textbox {
+    padding: 6px 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+#listview {
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    spacing: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    border-color: @borders;
+}
+#element {
+    padding: 2px 15px;
+}
+#element normal.normal {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element normal.urgent {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element normal.active {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element alternate.active {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element alternate.normal {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element alternate.urgent {
+    background-color: @normal-element-background;
+    text-color: @normal-element-foreground;
+}
+#element selected.normal {
+    background-color: @selected-element-background;
+    text-color: @selected-element-foreground;
+}
+#element selected.urgent {
+    background-color: @selected-element-background;
+    text-color: @selected-element-foreground;
+}
+#element selected.active {
+    background-color: @selected-element-background;
+    text-color: @selected-element-foreground;
+}
+#scrollbar {
+    background-color: @background;
+    handle-color: @scrollbar;
+    handle-width: 15px;
+}
+#mode-switcher {
+    background-color: @background;
+}
+#button {
+    background-color: @background;
+    text-color: @foreground;
+}
+#inputbar {
+    background-color: @background;
+    spacing: 0px;
+    border: 1px;
+    border-color: @prompt;
+    children: [ prompt, entry ];
+}
+#prompt {
+    padding: 6px 9px;
+    background-color: @prompt;
+    text-color: @prompt-text;
+}
+#entry {
+    padding: 6px 10px;
+    background-color: @background;
+    text-color: @foreground;
+}
+#case-indicator {
+    padding:6px 10px;
+    text-color: @foreground;
+    background-color: @background;
+}

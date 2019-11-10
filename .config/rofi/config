@@ -1,0 +1,4 @@
+rofi.font:          hack 10
+rofi.disable-history: true
+rofi.modi: run,drun
+rofi.theme: /home/wesley/.config/rofi/themes/matm.rasi
