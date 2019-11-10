@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-. $DIR/options
+. $DIR/powermenu-options
 
-
-MENU="$(rofi -sep "|" -dmenu -i -p "$MENU_TITLE" -width 25 -lines 4 <<< "$LOCK_ICON Lock|$LOGOUT_ICON Logout|$REBOOT_ICON Reboot|$SHUTDOWN_ICON Shutdown")"
+MENU="$(rofi -sep "|" -dmenu -i -p "$MENU_TITLE" -location 2 -yoffset 100 -width 15 -lines 4 <<< "$LOCK_ICON Lock|$LOGOUT_ICON Logout|$REBOOT_ICON Reboot|$SHUTDOWN_ICON Shutdown")"
 case "$MENU" in
     *Lock) $HOME/.config/locker/lock.sh ;;
     *Logout) i3-msg exit ;;
