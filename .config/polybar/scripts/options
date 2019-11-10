@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+export MENU_TITLE=' Options'
+export LOCK_ICON=''
+export LOGOUT_ICON=''
+export REBOOT_ICON=''
+export SHUTDOWN_ICON=''
