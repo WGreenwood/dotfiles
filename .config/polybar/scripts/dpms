@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+DPMS="/home/wesley/.local/bin/dpms"
+
+current=$($DPMS get)
+
+if [ $current == "on" ]; then
+    echo ''
+else
+    echo ''
+fi
+
