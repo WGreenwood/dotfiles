@@ -18,9 +18,10 @@ exec --no-startup-id nm-applet
 exec --no-startup-id udiskie -At2 &
 
 ### Main Hotkeys
-bindsym $mod+d exec rofi -sort -no-levenshtein-sort -yoffset "-200" -show run
-bindsym $mod+Shift+d exec rofi -sort -no-levenshtein-sort -yoffset "-200" -show drun
-bindsym Mod1+Tab exec rofi -modi window -yoffset "-200" -show window
+set $rofi_args -sort -no-levenshtein-sort -yoffset 100 -location 2
+bindsym $mod+d exec rofi $rofi_args -show run
+bindsym $mod+Shift+d exec rofi $rofi_args -show drun
+bindsym Mod1+Tab exec rofi $rofi_args -modi window -show window
 bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Control+t exec matm-prompt
 
