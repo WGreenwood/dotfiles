@@ -36,9 +36,9 @@ elif [ "$1" == "toggle" ]; then
 else
   get_dpms
   if [ "$?" == "0" ]; then
-    echo 'off'
-  else
     echo 'on'
+  else
+    echo 'off'
   fi
 fi
 
