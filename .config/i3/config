@@ -78,7 +78,8 @@ bindsym $mod+Shift+Right move right
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="VirtualBox*"] floating enable
-
+for_window [title="PlayOnLinux"] floating enable
+for_window [title="PlayOnLinux"] resize set width 450 px height 300 px
 
 ########################################################
 
@@ -86,6 +87,7 @@ for_window [class="VirtualBox*"] floating enable
 for_window [class=".*"] border pixel 0
 gaps inner 10
 gaps outer 5
+# 29 (polybar height) + 2(polybar 2px border) = 31
 gaps top 31
 
 set $mode_gaps Toggle gaps: (1) on (2) off
