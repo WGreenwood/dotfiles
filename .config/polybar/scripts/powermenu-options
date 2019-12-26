@@ -3,5 +3,6 @@
 export MENU_TITLE=' Options'
 export LOCK_ICON=''
 export LOGOUT_ICON=''
+export SLEEP_ICON=''
 export REBOOT_ICON=''
 export SHUTDOWN_ICON=''
