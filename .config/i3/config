@@ -78,8 +78,7 @@ bindsym $mod+Shift+Right move right
 for_window [class="Pavucontrol"] floating enable
 for_window [class="Nm-connection-editor"] floating enable
 for_window [class="VirtualBox*"] floating enable
-for_window [title="PlayOnLinux"] floating enable
-for_window [title="PlayOnLinux"] resize set width 450 px height 300 px
+for_window [title="PlayOnLinux"] floating enable, resize set width 450 px height 300 px, move position 5 px 36 px
 
 ########################################################
 
