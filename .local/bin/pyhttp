@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from psutil import net_if_addrs
+from socket import AddressFamily
+import http.server
+
+
+def get_connected_interface():
+    addrs = net_if_addrs()
+    for key, value in addrs.items():
+        if key == 'lo':
+            continue
+        if len(value) == 1:
+            continue  # No connected interface
+        for addr in value:
+            if addr.family == AddressFamily.AF_INET:
+                return True, addr.address
+    return False, None
+
+
+found, address = get_connected_interface()
+if not found:
+    print("No connected network interface was detected")
+    exit()
+
+http.server.test(bind=address)
